@@ -1,7 +1,7 @@
-import React, { Componet } from "react";
+import React, { Component } from "react";
 import { SupplierTableRow } from './SupplierTableRow';
 
-export class SupplierTable extends Componet {
+export class SupplierTable extends Component {
 
     render() {
         return <table className="table table-striped table-sm table-bordered">
@@ -17,7 +17,7 @@ export class SupplierTable extends Componet {
             <tbody>
                 {
                     this.props.suppliers.map(s =>
-                        <SupplierTableRow products={s}
+                        <SupplierTableRow supplier={s}
                             key={s.id}
                             editCallback={this.props.editCallback}
                             deleteCallback={this.props.deleteCallback}

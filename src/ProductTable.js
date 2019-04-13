@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ProductTableRow } from './ProductTableRow';
 
-export class ProductTable extends Comment{
+export class ProductTable extends Component{
     render(){
         return <table className="table table-sm table-striped table-bordered">
             <thead>
@@ -21,7 +21,7 @@ export class ProductTable extends Comment{
             <tbody>
                 {
                     this.props.products.map(p => 
-                        <ProductTableRow products = { p }
+                        <ProductTableRow product = { p }
                             key={p.id}
                             editCallback= {this.props.editCallback}
                             deleteCallback={this.props.deleteCallback}

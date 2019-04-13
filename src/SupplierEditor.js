@@ -38,12 +38,12 @@ export class SupplierEditor extends Component {
                     value={this.state.fromData.name} onChange={this.handleChange} />
             </div>
             <div className="form-group">
-                <label>Category</label>
+                <label>City</label>
                 <input className="form-control" name="city" 
                     value={this.state.fromData.city} onChange={this.handleChange} />
             </div>
             <div className="form-group">
-                <label>Price</label>
+                <label>Products</label>
                 <input className="form-control" name="products" 
                     value={this.state.fromData.products} onChange={this.handleChange} />
             </div>
