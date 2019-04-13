@@ -21,5 +21,38 @@ export class ProductEditor extends Component {
    handleClik = () => {
        this.props.saveCallback(this.state.fromData);
    }
-   
+
+   render(){
+       return <div  className="m-2">
+            <div className="form-group">
+                <label>ID</label>
+                <input className="form-control" name="id" disabled
+                value={ this.state.fromData.id } onChange={ this.handleChange } />
+            </div>
+           <div className="form-group">
+               <label>Name</label>
+               <input className="form-control" name="name" disabled
+                   value={this.state.fromData.name} onChange={this.handleChange} />
+           </div>
+           <div className="form-group">
+               <label>Category</label>
+               <input className="form-control" name="category" disabled
+                   value={this.state.fromData.category} onChange={this.handleChange} />
+           </div>
+           <div className="form-group">
+               <label>Price</label>
+               <input className="form-control" name="price" disabled
+                   value={this.state.fromData.price} onChange={this.handleChange} />
+           </div>
+           <div className="text-center">
+                <button className="btn btn-primary m-1" onClick={ this.handleClik }>
+                    Save
+                </button>
+                <button className="btn btn-secondary"
+                    onClick={ this.props.cancelCallback }>
+                    Cancel
+                </button>
+           </div>
+        </div>
+   }
 }
